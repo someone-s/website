@@ -6,23 +6,38 @@ body {
 
 .site-container {
     display: grid;
-
-    
 }
 
-.navigation-bar {
+.navigation-pad {
     display: grid;
-    gap: 1rem;
+    
+    grid-template-areas: "a b c";
 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr minmax(100px, 500px) 1fr;
     grid-auto-rows: 50px;
 
     background: coral;
 }
 
+.navigation-bar {
+    grid-area: b;
+
+    display: grid;
+    gap: 1rem;
+
+    align-self: center;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 50px;
+}
+
 .navigation-button {
     text-align: center;
     align-self: center;
+
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
 }
 
 .grid-container {
